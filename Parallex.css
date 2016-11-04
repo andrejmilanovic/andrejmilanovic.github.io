@@ -1,0 +1,68 @@
+html {
+    box-sizing: border-box;
+    overflow: hidden; /*turn of the scroll bars from html element*/
+    margin: 0px;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    
+    background-color: #ffd800;
+    
+    height: 100vh; /*scaling the body to the size of the window*/
+    overflow-y: visible; /*turn on the scroll bars if needed*/
+    overflow-x: hidden; /*hide the horisontal scroll bar*/
+    margin: 0px;
+    -webkit-overflow-scrolling: touch; /*nice scrolling preformance on mobile devices*/
+
+    -ms-perspective: 1px;
+    -webkit-perspective: 1px;
+    perspective: 1px;
+    
+    background-image: url("yard.jpg");
+}
+
+img {
+    width: 100%;
+    display: block;
+    /*margin-left: 816px;
+    margin-top: -415px;*/
+}
+
+.parallax-group {
+    -ms-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    
+}
+
+.back {    
+    -ms-transform: translateZ(-1px) scale(2);
+    -webkit-transform: translateZ(-1px) scale(2);
+    transform: translateZ(-1px) scale(2);
+    position: relative;
+    /*top: calc(((100vh - 80vw) /4 )* -2);*/
+    z-index: -1;
+}
+
+.front {
+    background-color: #0ff;
+    padding: 14em 1em;
+    position: relative;
+    z-index: 2;
+}
+
+h2 {
+    -ms-transform: translateZ(-3px) scale(4);
+    -webkit-transform: translateZ(-3px) scale(4);
+    transform: translateZ(-3px) scale(4);
+    position: absolute;
+    top: 10em;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    z-index: 5;
+}
